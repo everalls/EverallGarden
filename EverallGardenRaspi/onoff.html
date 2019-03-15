@@ -1,0 +1,146 @@
+<html>
+
+<head>
+
+<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js">
+</script>	
+<script>
+
+	var firecaseConfig = {
+		apiKey: "AIzaSyAAmIf2LvOMvJwXHZN9pCJ3UlUClyx0zAE",
+		authDomain: "paspinode.firebaseapp.com",
+		databaseURL: "https://paspinode.firebaseio.com",
+		projectId: "paspinode",
+		storageBucket: "paspinode.appspot.com",
+		messagingSenderId: "226347946845"
+	};
+	firebase.initializeApp(firecaseConfig);
+	var database = firebase.database();
+	var tapsRefPath = 'taps';
+	var tapsReferense = firebase.database().ref(tapsRefPath);
+
+</script>
+
+</head>
+
+<body>
+<style>
+
+html {
+	font-size: 1vh;
+}
+
+.onOffButton {
+	position: absolute;
+    left: 50%;
+    top: 20rem;
+    transform: translate(-50%, 0);
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    border: solid thin #2bb9e2;
+    background-color: #248c1ed9;;
+    box-shadow: 0 0 0.7rem 0.5rem #00000038;
+}
+
+.onOffButton2 {
+	position: absolute;
+    left: 50%;
+    top: 50rem;
+    transform: translate(-50%, 0);
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    border: solid thin #2bb9e2;
+    background-color: #ff4f4f;
+    box-shadow: 0 0 0.7rem 0.5rem #00000038;
+}
+
+.onOffButton:active {
+	transform: translate(-50%, 0) scale(0.97, 0.97);
+	box-shadow: 0 0 0.4rem 0.3rem #00000038;	
+}
+
+.onOffButton2:active {
+	transform: translate(-50%, 0) scale(0.97, 0.97);
+	box-shadow: 0 0 0.4rem 0.3rem #00000038;	
+}
+
+.hidden {
+	display: none;
+}
+
+.onOffText {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7rem;
+}
+
+
+
+
+	</style>
+
+	<div class="onOffButton" onclick="onOff()"> 
+		<div class="onOffText onText">
+			ON
+		</div>
+
+		<div class="onOffText offText hidden">
+			OFF
+		</div>
+
+	</div>
+
+	<div class="onOffButton2" onclick="onOff2()"> 
+			<div class="onOffText onText2">
+				ON
+			</div>
+	
+			<div class="onOffText offText2 hidden">
+				OFF
+			</div>
+	
+	</div>
+
+    <script>
+		var state = 0; // turned-off;
+		var state2 = 0;
+		function onOff() {
+			if (state === 'on') {
+				state = 'off'
+			} else {
+				state = 'on'
+			}
+			document.querySelector('.onText').classList.toggle('hidden');
+			document.querySelector('.offText').classList.toggle('hidden');
+			database.ref('taps/tap1').update({
+    			state: state
+  			});
+		}	
+
+		function onOff2() {
+			console.log('state2: ' + state2);
+			if (state2 === 'on') {
+				state2 = 'off'
+			} else {
+				state2 = 'on'
+			}
+			console.log('state2: ' + state2);
+
+			document.querySelector('.onText2').classList.toggle('hidden');
+			document.querySelector('.offText2').classList.toggle('hidden');
+			database.ref('taps/tap2').update({
+    			state: state2
+  			});
+		}	
+
+   </script>
+
+</body>
+
+</html>
