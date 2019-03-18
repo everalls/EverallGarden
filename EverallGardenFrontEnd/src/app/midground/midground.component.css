@@ -1,0 +1,104 @@
+.buttonsContainer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.controlBtnWrapper{
+    position: relative;
+    flex: 1;
+    width: 100%;
+    height: 15rem;
+    /* border: solid thin blueviolet; */
+}
+
+.controlBtn {
+    position: absolute;
+    left: 0rem;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    width: 100%;
+    height: 10rem;
+    border-radius: 10rem;
+    background-color: #c4eabdd6;
+    box-shadow: 0 0 0 4px white, 0 0 0 7px #c4eabdd6;
+    font-family: 'Open Sans Light';
+    text-align: center;
+    padding-left: 0rem;
+    font-size: 6rem;
+    /* color: rgba(60, 109, 214, 0.904); */
+    color: #003861;
+    text-shadow: 2px 0px 3px #5895a5;
+}
+
+.controlBtn > span {
+    position: absolute;
+    left: 5rem;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-family: 'Open Sans Light';
+    text-align: center;
+    padding-left: 0rem;
+    font-size: 6rem;
+    color: rgba(60, 109, 214, 0.904);
+    text-shadow: 2px 0px 3px #5895a5;
+}
+
+.svgContainer {
+    position: absolute;
+    left: 41rem;
+    top: 29.5rem;
+    width: 10rem;
+    height: 10rem;
+}
+
+svg {
+    width: 100%;
+}
+
+path {
+    stroke: green;
+    fill: green;
+}
+
+.pngContainer{
+    position: absolute;
+    left: 41rem;
+    top: 44.5rem;
+    width: 10rem;
+    height: 10rem;
+}
+
+.pngContainer2{
+    position: absolute;
+    left: 41rem;
+    top: 54.5rem;
+    width: 10rem;
+    height: 10rem;
+}
+
+.pngContainer3{
+    position: absolute;
+    left: 41rem;
+    top: 64.5rem;
+    width: 10rem;
+    height: 10rem;
+}
+
+.pngContainer4{
+    position: absolute;
+    left: 43rem;
+    top: 31.5rem;
+    width: 8rem;
+    height: 8rem;
+}
+
+.watering {
+    width: 100%;
+}
