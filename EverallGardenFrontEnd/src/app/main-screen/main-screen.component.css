@@ -1,0 +1,53 @@
+.buttonsContainer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.buttonWrapper {
+    position: relative;
+    flex: 1;
+    width: 100%;
+}
+
+.controlButton {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+    height: 10rem;
+    border-radius: 10rem;
+    background-color: #c4eabdd6;
+    box-shadow: 0 0 0 4px white, 0 0 0 7px #c4eabdd6;
+}
+
+.controlButton > span.buttonName {
+    position: absolute;
+    left: 3rem;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    font-family: 'Open Sans Light';
+    text-align: left;
+    font-size: 5rem;
+    color: #003861;
+    text-shadow: 2px 0px 3px #5895a5;
+}
+
+.buttonIcon{
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    -webkit-transform: translate(0, 50%);
+    transform: translate(0, -50%);
+    height: 75%;
+    border-radius: 50%;
+    box-shadow: 0 0 0 9px #c4eabdd6, 0 0 0 13px white, 0 0 0 16px #c4eabdd6;
+}
