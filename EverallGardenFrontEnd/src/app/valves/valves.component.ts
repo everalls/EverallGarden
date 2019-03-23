@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ValvesComponent implements OnInit {
 
+  valves = ['valve1', 'valve2', 'valve3', 'valve4'];
+
   constructor() { }
 
   ngOnInit() {
