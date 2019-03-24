@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ValveComponent implements OnInit {
 
   valveData = {
-    name: '1',
+    name: 'Valve1',
     description: 'Trees and grass around them',
     id: '1',
     status: '1'

@@ -1,0 +1,39 @@
+.valve {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    background-color: #c4eabdd6;
+    box-shadow: 0 0 0 4px white, 0 0 0 7px #c4eabdd6;
+}
+
+.valve > .name {
+    position: absolute;
+    left: 3rem;
+    top: 1rem;
+    font-family: 'Open Sans Regular';
+    text-align: left;
+    font-size: 3rem;
+    color: rgb(64, 64, 64);
+}
+
+.valve > .description {
+    position: absolute;
+    left: 3rem;
+    bottom: 1rem;
+    font-family: 'Open Sans Regular';
+    text-align: left;
+    font-size: 1.9rem;
+    color: rgb(64, 64, 64);
+}
+
+.icon{
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    -webkit-transform: translate(0, 50%);
+    transform: translate(0, -50%);
+    height: 75%;
+    border-radius: 50%;
+    box-shadow: 0 0 0 9px #c4eabdd6, 0 0 0 13px white, 0 0 0 16px #c4eabdd6;
+}

@@ -1,9 +1,9 @@
-div {
+.valveWrapper {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 30%;
-    height: 30%;
-    background-color: rgba(100, 0, 200, 0.5);
+    width: 90%;
+    height: 10rem;
+    
 }
