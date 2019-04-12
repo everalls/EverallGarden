@@ -7,24 +7,62 @@
     box-shadow: 0 0 0 4px white, 0 0 0 7px #c4eabdd6;
 }
 
-.valve > .name {
+.indicator{
     position: absolute;
-    left: 3rem;
-    top: 1rem;
+    left: 1.5rem;
+    top: 40%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #ddd;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #6b6d6a 0 2px 12px;
+} 
+
+.indicator.on {
+    background-color: #ABFF00;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+}
+
+.name {
+    position: absolute;
+    left: 6rem;
+    top: 40%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    width: 40%;
     font-family: 'Open Sans Regular';
     text-align: left;
     font-size: 3rem;
     color: rgb(64, 64, 64);
 }
 
-.valve > .description {
+.runtime {
     position: absolute;
-    left: 3rem;
+    left: 6rem;
+    top: 0.3rem;
+    width: 8rem;
+    font-family: 'Open Sans Regular';
+    text-align: left;
+    font-size: 1.5rem;
+    color: green;
+    opacity: 0;
+}
+
+.runtime.on {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.description {
+    position: absolute;
+    left: 6rem;
     bottom: 1rem;
     font-family: 'Open Sans Regular';
     text-align: left;
     font-size: 1.9rem;
-    color: rgb(64, 64, 64);
+    color: rgb(16, 16, 16);
 }
 
 .icon{

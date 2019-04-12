@@ -1,3 +1,5 @@
-<div class="valveWrapper">
-	<app-valve></app-valve>
+<div class="valvesContainer">
+		<div class="valveWrapper" *ngFor="let valve of valves">
+				<app-valve [valveData]="valve" (valveClick)=onValveClick($event)></app-valve>
+		</div>
 </div>

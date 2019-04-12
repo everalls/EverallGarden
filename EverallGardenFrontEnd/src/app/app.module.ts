@@ -11,6 +11,8 @@ import { SensorsComponent } from './sensors/sensors.component';
 import { InfoComponent } from './info/info.component';
 import { MainScreenComponent } from './main-screen/main-screen.component';
 import { ValveComponent } from './valve/valve.component';
+import { OverlayComponent } from './overlay/overlay.component';
+import { ValveControlComponent } from './valve-control/valve-control.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ValveComponent } from './valve/valve.component';
     SensorsComponent,
     InfoComponent,
     MainScreenComponent,
-    ValveComponent
+    ValveComponent,
+    OverlayComponent,
+    ValveControlComponent
   ],
   imports: [
     BrowserModule,

@@ -1,23 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Valve } from '../shared/valve';
 
 @Component({
-  selector: 'app-valve',
-  templateUrl: './valve.component.html',
-  styleUrls: ['./valve.component.css']
+	selector: 'app-valve',
+	templateUrl: './valve.component.html',
+	styleUrls: ['./valve.component.css']
 })
 export class ValveComponent implements OnInit {
 
-  valveData = {
-    name: 'Valve1',
-    description: 'Trees and grass around them',
-    id: '1',
-    status: '1'
-  };
+	@Input() valveData: Valve;
+	@Output() valveClick = new EventEmitter();
 
-  constructor() { }
+	constructor() { }
 
+	valveIsOn() {
+		if (this.valveData.status.state === '1') {
+			return true;
+		} else {
+			return false;
+		}
+	}
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
+
+	onValveClick() {
+		this.valveClick.emit(this.valveData); 
+	}
 
 }

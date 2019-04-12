@@ -1,5 +1,7 @@
- <div class="valve">
-   <div class="name"> {{valveData.name}} </div>
-   <div class="description"> {{valveData.description}} </div>
-   <img src="assets/opened_tap2.png"  class="icon">
- </div>
+<div class="valve" (click)="onValveClick()">
+	<div class="indicator" [class.on]="valveIsOn()"></div>
+	<div class="name">{{valveData.name}}</div>
+	<div class="runtime" [class.on]="valveIsOn()"> 21:17:07</div>
+	<div class="description"> {{valveData.description}} </div>
+	<img src="assets/opened_tap2.png" class="icon">
+</div>

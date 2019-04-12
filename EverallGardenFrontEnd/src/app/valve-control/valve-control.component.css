@@ -1,0 +1,102 @@
+.controlContainer{
+	position: relative;
+	width: 100%;
+	height: 50rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	; 
+}
+
+.name {
+	width: 100%;
+    font-size: 2.5rem;
+    line-height: 7rem;
+    border-bottom: solid 1px #777;
+    color: #777;
+    background-color: #ccc;
+}
+
+.controlsContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.controlRow {
+	width: 100%;
+	height: 10rem;
+	border-bottom: solid 1px #ccc;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.closeButton {
+	position: absolute;
+    left: 50%;
+    bottom: 2rem;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
+    width: 20rem;
+    height: 7rem;
+    font-size: 3rem;
+    border: solid thin #777;
+    border-radius: 2rem;
+    color: white;
+    font-family: 'Open Sans Light';
+    line-height: 7rem;
+    color: #ccc;
+}
+
+.onoff {
+    width: 7rem;
+    height: 7rem;
+   
+}
+
+.onoff > svg > path.onoffBtnColor {
+	fill: #43a43c;
+}
+
+.onoff.on > svg > path.onoffBtnColor {
+	fill: #dd3e46;
+}
+
+.radio {
+	position: relative;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	border: solid thin #75ad6b;
+}
+
+.radio.on::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 70%;
+	height: 70%;
+	border-radius: 50%;
+	background-color: #75ad6b;
+}
+
+.radio::before {
+	content: attr(data-before);
+	position: absolute;
+	left: 50%;
+	bottom: -2.8rem;
+	transform: translate(-50%, 0);
+	font-size: 1.5rem;
+	color: #777;
+	white-space: nowrap;
+}
+
+
+
+
+
+
