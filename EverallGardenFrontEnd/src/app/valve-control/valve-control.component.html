@@ -7,7 +7,7 @@
 	<div class="controlsContainer">
 		<div class="controlRow controlRow1">
 			<!-- onoff control -->
-			<div class="onoff">
+			<div class="onoff" [ngClass]="{'on' : valve.status.state === '1'}" (click) = onOnOffClick()>
 					<svg  viewBox="0 0 464 464">
 						<path class="onoffBtnColor"
 							d="m464 232c0 128.128906-103.871094 232-232 232s-232-103.871094-232-232 103.871094-232 232-232 232 103.871094 232 232zm0 0"
@@ -24,7 +24,7 @@
 
 
 				<div *ngFor="let radio of timeRadios; index as index" class="radio" 
-					[ngClass]="[radio.class, radio.state ? 'on' : '']" 
+					[ngClass]="[radio.class, radio.state ? 'on' : '', radio.disabled ? 'disabled' : '']" 
 					(click) = onTimeRadioClick(index)
 					[attr.data-before]="radio.class"
 					[attr.data-textcolor]="'red'"

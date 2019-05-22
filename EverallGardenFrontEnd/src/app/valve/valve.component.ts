@@ -6,7 +6,7 @@ import { Valve } from '../shared/valve';
 	templateUrl: './valve.component.html',
 	styleUrls: ['./valve.component.css']
 })
-export class ValveComponent implements OnInit {
+export class ValveComponent implements OnInit { 
 
 	@Input() valveData: Valve;
 	@Output() valveClick = new EventEmitter();

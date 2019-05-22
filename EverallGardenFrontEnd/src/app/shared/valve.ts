@@ -6,18 +6,15 @@ export class Valve {
 		public name: string,
 		public description: string,
 		public start: string,
-		public status: {
-			order: string;
-			state: string;
-			start: string;
-			duration: string;
-		}) { 
+		public status: any
+	) 
+	{ 
 
-				this.id = id;
-				this.hardwareId = hardwareId;
-				this.name = name;
-				this.description = description;
-				this.start = start;
-				this.status = status;
-			}	
+		this.id = id;
+		this.hardwareId = hardwareId;
+		this.name = name;
+		this.description = description;
+		this.start = start;
+		this.status = status;
+	}	
 }

@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+	apiKey: "AIzaSyAAmIf2LvOMvJwXHZN9pCJ3UlUClyx0zAE",
+    authDomain: "paspinode.firebaseapp.com",
+    databaseURL: "https://paspinode.firebaseio.com",
+    projectId: "paspinode",
+    storageBucket: "paspinode.appspot.com",
+    messagingSenderId: "226347946845",
+    appId: "1:226347946845:web:813866560f9494dc"
+  }
 };
 
 /*
