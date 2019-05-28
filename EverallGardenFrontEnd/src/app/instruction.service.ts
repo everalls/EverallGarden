@@ -1,14 +1,27 @@
 import { AngularFireDatabase } from 'angularfire2/database';
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class InstructionService {
 
-  constructor(private db: AngularFireDatabase) { }
+	instructionsPath: string; 
 
-  create(product) {
-	  return this.db.list('instructions').push(product);
-  }
+	constructor(private db: AngularFireDatabase) {
+		this.instructionsPath = 'instructions'; 
+	 }
+
+	create(instruction) {
+		return this.db.list(this.instructionsPath).push(instruction);
+	
+	}
+
+	update(key, instruction) {
+		return this.db.object(this.instructionsPath + '/' + key).update(instruction);
+	}
+
+
+
+
 }

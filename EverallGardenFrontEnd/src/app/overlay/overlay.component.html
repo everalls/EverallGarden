@@ -1,7 +1,7 @@
 <div class="modalBackground" [class.activate]="request.toShow" ></div>
 <div class="bottomSlideContainer" [class.activate]="request.toShow">
 	<div class="bottomSlideContent">
-		<app-valve-control [valve]="request.data" (done)="hideSlider()"></app-valve-control>
+		<app-valve-control *ngIf="request.toShow" [valve]="request.data" (done)="hideSlider()"></app-valve-control>
 	</div>
 		
 </div>

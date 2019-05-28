@@ -4,6 +4,7 @@ export class ValveInstruction {
 	// 1 : immediate with  delay
 	// other tipes TBD 
 	constructor(
+		public id: string, //update it after first push the instruction to FB DB 
 		public creation_date: string, // UTC date string
 		public delay: number,
 		public start_date: string,
@@ -13,6 +14,7 @@ export class ValveInstruction {
 		public data: any // here will be type-specific fields. For type 0: duration. For other types: TBD	
 	) 
 	{ 
+		this.id = id;
 		this.creation_date = creation_date;
 		this.delay = delay;
 		this.start_date = start_date;

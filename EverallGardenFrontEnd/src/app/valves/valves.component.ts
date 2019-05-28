@@ -19,26 +19,11 @@ export class ValvesComponent implements OnInit {
 	}
 
 	ngOnInit() {
-
-	let v1 = new Valve(	'xyz', '1', 'Valve1', 'Trees at the front of the house', '1234567', 
-							{ order: 'jhgj', state: '1', start: '76587', duration: '876587' }
-						);
-	
-	let v2 = new Valve(	'xyz', '2', 'Valve2', 'Plants at the back of the house', '8657865', 
-							{ order: 'jhgj', state: '0', start: '76587', duration: '876587' }
-						);	
-	
-	let v3 = new Valve(	'xyz', '2', 'Valve3', 'Plants at the back of the house', '8657865', 
-							{ order: 'jhgj', state: '1', start: '76587', duration: '876587' }	
-						);
-
-	let v4 = new Valve(	'xyz', '2', 'Valve4', 'Plants at the back of the house', '8657865', 
-							{ order: 'jhgj', state: '0', start: '76587', duration: '876587' }
-						);	
-						
-	this.valves = [v1, v2, v3, v4];						
-
-
+		let v1 = new Valve(	'xyz', '1', 'Valve1', 'Trees at the front of the house', '1234567890', '1', null)
+		let v2 = new Valve(	'xyz', '2', 'Valve2', 'Plants at the back of the house', '1234567890', '1', null)
+		let v3 = new Valve(	'xyz', '3', 'Valve3', 'Trees at the front of the house', '1234567890', '1', null)
+		let v4 = new Valve(	'xyz', '4', 'Valve4', 'Plants at the back of the house', '1234567890', '1', null)									
+		this.valves = [v1, v2, v3, v4];						
   }
 
   onValveClick(request) {

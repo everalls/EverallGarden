@@ -14,7 +14,7 @@ export class ValveComponent implements OnInit {
 	constructor() { }
 
 	valveIsOn() {
-		if (this.valveData.status.state === '1') {
+		if (this.valveData.state === '1') {
 			return true;
 		} else {
 			return false;

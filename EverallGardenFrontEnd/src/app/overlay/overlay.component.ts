@@ -17,8 +17,8 @@ export class OverlayComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		// init empty request - before data ron the service
-		// subscribe to requests from the server
+		// init empty request - before data on the service
+		// subscribe to requests from the service
 		this.request = new SliderActivationRequest(false, '', {});
 		this.bottomSliderController.sliderRequest.subscribe(request => {
 			this.request = request;
