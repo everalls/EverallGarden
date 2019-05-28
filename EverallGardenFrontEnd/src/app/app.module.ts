@@ -16,6 +16,7 @@ import { ValveComponent } from './valve/valve.component';
 import { environment } from 'src/environments/environment';
 import {AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule} from 'angularfire2/database';
+import { ValveService } from './valve.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AngularFireDatabaseModule} from 'angularfire2/database';
   ],
 
   providers: [
-	InstructionService
+	InstructionService,
+	ValveService
   ],
   bootstrap: [AppComponent]
 })
