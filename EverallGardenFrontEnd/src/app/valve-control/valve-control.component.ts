@@ -66,6 +66,7 @@ export class ValveControlComponent implements OnInit {
 			0,
 			dateUtc,
 			this.valve.id,
+			this.valve.hardwareId,
 			this.newState,
 			instructionType,
 			instructionData

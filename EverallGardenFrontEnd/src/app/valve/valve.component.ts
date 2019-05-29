@@ -21,11 +21,21 @@ export class ValveComponent implements OnInit {
 		}
 	}
 
+	valveIsDisabled() {
+		if (this.valveData.state === 'NA') {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	ngOnInit() {
 	}
 
 	onValveClick() {
-		this.valveClick.emit(this.valveData); 
+		if (this.valveData.state !== 'NA') {
+			this.valveClick.emit(this.valveData); 
+		}
 	}
 
 }

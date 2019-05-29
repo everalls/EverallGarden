@@ -22,7 +22,6 @@ export class ValvesComponent implements OnInit {
 
 	ngOnInit() {
 		this.valves$ = this.valveService.getValves();
-		console.log('valves : ', this.valves$);
   	}
 
   	onValveClick(request) {
