@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MidgroundComponent } from './midground.component';
 
@@ -6,7 +6,7 @@ describe('MidgroundComponent', () => {
   let component: MidgroundComponent;
   let fixture: ComponentFixture<MidgroundComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ MidgroundComponent ]
     })

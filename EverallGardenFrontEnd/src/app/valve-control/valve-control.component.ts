@@ -76,12 +76,12 @@ export class ValveControlComponent implements OnInit {
 	}
 
 	sendInstruction (instruction) {
-		console.log('New instruction is sent : ', this.instruction);
+		// console.log('New instruction is sent : ', this.instruction);
 		var self = this; // to access current 'this' inside promise callback;
-		this.instructionService.create(instruction)
-		.then(instructionUpdateId)
-		.then(instructionCheckAcknowledge)
-		.catch(error => logErrorInPromise(error))
+		// this.instructionService.create(instruction)
+		// .then(instructionUpdateId)
+		// .then(instructionCheckAcknowledge)
+		// .catch(error => logErrorInPromise(error))
 
 		function logErrorInPromise (error) {
 			//TODO popup or message to user

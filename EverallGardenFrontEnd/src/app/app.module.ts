@@ -14,8 +14,9 @@ import { ValveControlComponent } from './valve-control/valve-control.component';
 import { ValvesComponent } from './valves/valves.component';
 import { ValveComponent } from './valve/valve.component';
 import { environment } from 'src/environments/environment';
-import {AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule} from 'angularfire2/database';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 import { ValveService } from './valve.service';
 
 @NgModule({
@@ -36,8 +37,9 @@ import { ValveService } from './valve.service';
   imports: [
     BrowserModule,
 	AppRoutingModule,
-	AngularFireModule.initializeApp(environment.firebase),
-	AngularFireDatabaseModule
+	AngularFireModule.initializeApp(environment.  firebase),
+	AngularFirestoreModule, // Only required for database features
+	AngularFireStorageModule // Only required for storage features
   ],
 
   providers: [
