@@ -1,6 +1,7 @@
-import { Injectable, EventEmitter, Output, OnInit } from '@angular/core';
+import { Injectable, EventEmitter, Output, OnInit, Directive } from '@angular/core';
 import { SliderActivationRequest } from './shared/sliderActivationRequest';
 
+@Directive()
 @Injectable({
   providedIn: 'root'
 })
