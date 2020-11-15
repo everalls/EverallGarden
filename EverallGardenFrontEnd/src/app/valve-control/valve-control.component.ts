@@ -48,7 +48,7 @@ export class ValveControlComponent implements OnInit {
 		this.duration = this.timeRadios[index].value * Utils.MS_IN_MINUTE;
 	}
 
-	onOnOffClick() {
+	onOnOffClick() {		
 		let dateUtc = new Date().toUTCString();
 		let instructionType = '0' // one-time on or off
 		if(this.valve.state === '1') {
@@ -76,12 +76,12 @@ export class ValveControlComponent implements OnInit {
 	}
 
 	sendInstruction (instruction) {
-		// console.log('New instruction is sent : ', this.instruction);
+		console.log('New instruction is sent : ', this.instruction);
 		var self = this; // to access current 'this' inside promise callback;
-		// this.instructionService.create(instruction)
-		// .then(instructionUpdateId)
-		// .then(instructionCheckAcknowledge)
-		// .catch(error => logErrorInPromise(error))
+		this.instructionService.create(instruction)
+			.then(instructionUpdateId)
+			.then(instructionCheckAcknowledge)
+			.catch(error => logErrorInPromise(error))
 
 		function logErrorInPromise (error) {
 			//TODO popup or message to user
@@ -95,7 +95,7 @@ export class ValveControlComponent implements OnInit {
 			
 		}
 
-		function instructionUpdateId (instruction) {
+		function instructionUpdateId(instruction) {
 			var id = instruction.key;
 			var incrementalData = {
 				'id': id

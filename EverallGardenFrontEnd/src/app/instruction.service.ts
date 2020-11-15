@@ -9,16 +9,17 @@ export class InstructionService {
 	instructionsPath: string; 
 
 	constructor(private db: AngularFirestore) {
-		this.instructionsPath = 'instructions'; 
+		this.instructionsPath = 'instructions';
+		                        'instructions'
 	}
 
 	create(instruction) {
-		//return this.db.list(this.instructionsPath).push(instruction);
+		return this.db.collection(this.instructionsPath).add(Object.assign({}, instruction));
 	
 	}
 
 	update(key, instruction) {
-		//return this.db.object(this.instructionsPath + '/' + key).update(instruction);
+		return this.db.collection(this.instructionsPath + '/' + key).doc().update(Object.assign({}, instruction));
 	}
 
 
