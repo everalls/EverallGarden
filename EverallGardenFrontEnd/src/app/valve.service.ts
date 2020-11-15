@@ -13,11 +13,6 @@ export class ValveService {
 	constructor(private db: AngularFirestore) {}
 
 	getValves() { 
-		let taps = this.db.collection(this.valvesPath);
-		console.log('db:::', this.db);
-		console.log('taps:::', taps);
-
-		// return taps;
 		return this.db.collection(this.valvesPath).valueChanges();
 	}
 }
