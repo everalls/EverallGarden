@@ -1,20 +1,19 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { Valve } from '../shared/valve';
+import { Component, Input, OnInit, Output, EventEmitter } from "@angular/core";
+import { Valve } from "../shared/valve";
 
 @Component({
-	selector: 'app-valve',
-	templateUrl: './valve.component.html',
-	styleUrls: ['./valve.component.css']
+	selector: "app-valve",
+	templateUrl: "./valve.component.html",
+	styleUrls: ["./valve.component.css"],
 })
-export class ValveComponent implements OnInit { 
-
+export class ValveComponent implements OnInit {
 	@Input() valveData: Valve;
 	@Output() valveClick = new EventEmitter();
 
-	constructor() { }
+	constructor() {}
 
 	valveIsOn() {
-		if (this.valveData.state === '1') {
+		if (this.valveData.state === "1") {
 			return true;
 		} else {
 			return false;
@@ -22,20 +21,19 @@ export class ValveComponent implements OnInit {
 	}
 
 	valveIsDisabled() {
-		if (this.valveData.state === 'NA') {
+		if (this.valveData.state === "NA") {
 			return true;
 		} else {
 			return false;
 		}
 	}
 
-	ngOnInit() {
-	}
+	ngOnInit() {}
 
 	onValveClick() {
-		if (this.valveData.state !== 'NA') {
-			this.valveClick.emit(this.valveData); 
+		if (this.valveData.state !== "NA") {
+			this.valveClick.emit(this.valveData);
 		}
+		console.log("Valve data:::", this.valveData);
 	}
-
 }

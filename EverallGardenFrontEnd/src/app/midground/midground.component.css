@@ -1,0 +1,6 @@
+.appContent {
+	position: absolute;
+	top: 10rem;
+	width: 100%;
+	height: calc(100% - 10rem);
+}

@@ -1,7 +1,7 @@
 <div class="valve" (click)="onValveClick()">
 	<div class="indicator" [class.on]="valveIsOn()" [class.disabled]="valveIsDisabled()"></div>
 	<div class="name">{{valveData.name}}</div>
-	<div class="runtime" [class.on]="valveIsOn()"> 21:17:07</div>
-	<div class="description"> {{valveData.description}} </div>
+	<div *ngIf="valveIsOn()" class="runtime">21:17:07</div>
+	<div class="description"> {{valveData.description | stringTruncate:30}} </div>
 	<img src="assets/opened_tap2.png" class="icon">
 </div>
